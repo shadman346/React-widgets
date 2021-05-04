@@ -7,60 +7,61 @@ import Route from './Route';
 import Header from './Header';
 
 const items = [
-    {
-        title: "student",
-        content: "faizan is the best student i have ever seen okay?????? nooo?????"
-    },
-    {
-        title: "anime",
-        content: "faizan is the best anime i have ever seen okay?????? nooo?????"
-    },
-    {
-        title: "data structure",
-        content: "stack is the best ds i have ever seen okay?????? nooo?????"
-    }
-]
+   {
+      title: 'student',
+      content:
+         'shadman is the best student i have ever seen okay?????? nooo?????',
+   },
+   {
+      title: 'anime',
+      content: 'naruto is the best anime i have ever seen okay?????? nooo?????',
+   },
+   {
+      title: 'data structure',
+      content: 'stack is the best ds i have ever seen okay?????? nooo?????',
+   },
+];
 const options = [
-    {
-        label: "The Color Red",
-        value: "red",
-    },
-    {
-        label: "The Color Green",
-        value: "green",
-    },
-    {
-        label: "A Shade of Blue",
-        value: "blue",
-    },
+   {
+      label: 'The Color Red',
+      value: 'red',
+   },
+   {
+      label: 'The Color Green',
+      value: 'green',
+   },
+   {
+      label: 'A Shade of Blue',
+      value: 'blue',
+   },
 ];
 
 const App = () => {
-    const [selected, setSelected] = useState(options[0]);
+   const [selected, setSelected] = useState(options[0]);
 
-    return (
-        <div>
-            <Header />
-            <Route path="/">
-                <Accordion items={items} />
-            </Route>
-            <Route path="/list">
-                <Search />
-            </Route>
-            <Route path="/dropdown">
-                <Dropdown
-                    label={"select a color"}
-                    selected={selected}
-                    onSelectedChange={setSelected}
-                    options={options}
-                />
-            </Route>
-            <Route path="/translate">
-                <Translate />
-            </Route>
-        </div>
-    )
-}
+   return (
+      <div>
+         <Header />
+         <Route path="/">
+            <Accordion items={items} />
+         </Route>
+         <Route path="/list">
+            <Search />
+         </Route>
+         <Route path="/dropdown">
+            <Dropdown
+               label={'select a color'}
+               selected={selected}
+               onSelectedChange={setSelected}
+               options={options}
+            />
+         </Route>
+         <Route path="/translate">
+            <Translate />
+         </Route>
+      </div>
+   );
+};
 // return (
 //     <div>
 
